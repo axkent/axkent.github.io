@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="" />
+
+
+<title>TSA Checkpoint Travel Numbers</title>
+
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Axel Kent</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Projects
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="project1.html">TSA Checkpoint Travel Numbers</a>
+    </li>
+    <li>
+      <a href="project3.html">All Star Game Selection History: San Diego Padres</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="section-header">
+
+
+
+<h1 class="title toc-ignore">TSA Checkpoint Travel Numbers</h1>
+<h4 class="author"></h4>
+
+</div>
+
+
+<p>Sometimes I will see a news article like this: <a
+href="https://www.cbsnews.com/news/tsa-airport-security-screen-record-3-million/">Record
+3 million passengers passed through TSA checkpoints Sunday after July
+4th</a>. I was curious about TSA checkpoint data looked like, especially
+during the COVID-19 pandemic. I found the TSA Checkpoint Travel Numbers
+here: <a
+href="https://www.tsa.gov/travel/passenger-volumes">https://www.tsa.gov/travel/passenger-volumes</a>.</p>
+<p><br> I used R to scrape the tables from the TSA website and plot
+visualizations. This project especially helped me practice web scraping
+and basic Shiny tools.</p>
+<p><br> I started by plotting a static graph of the travelers going
+through TSA checkpoints from January 1, 2019 to the present day (July
+21, 2024).</p>
+<p><img src="Project1_files/figure-html/unnamed-chunk-1-1.png" width="1152" />
+Then I put together a Shiny app that allows users to:</p>
+<ol style="list-style-type: decimal">
+<li><p>Select a year to see a visualization of travelers in the selected
+year. I set 2020 as the default plot to be shown because of the plummet
+of travelers around the start of the COVID-19 pandemic.</p></li>
+<li><p>Select a day (e.g. April 15 would be 04-15) to see a table for
+travel counts for that day across each year from 2019-2024.
+<br></p></li>
+</ol>
+<p style="font-size:18pt">
+<strong>View the Shiny App on my shinyapps.io page here:</strong>
+<strong><a
+href="https://axelkent.shinyapps.io/tsa-shiny/">https://axelkent.shinyapps.io/tsa-shiny/</a></strong>
+</p>
+<p><br> <br></p>
+<div id="section-data-sources" class="section level4">
+<h4><strong>Data sources:</strong></h4>
+<p>TSA (2024). TSA Passenger Volumes, 2019-2024, <a
+href="https://www.tsa.gov/travel/passenger-volumes"
+class="uri">https://www.tsa.gov/travel/passenger-volumes</a></p>
+</div>
+<div id="section-code" class="section level4">
+<h4><strong>Code:</strong></h4>
+<pre class="r"><code>library(rvest)
+library(ggplot2)
+library(dplyr)
+library(stringr)
+library(lubridate)
+library(scales)
+library(shiny)
+library(DT)
+# Specify the URL
+url &lt;- &quot;https://www.tsa.gov/travel/passenger-volumes&quot;
+
+# Read the HTML content from the webpage
+webpage &lt;- read_html(url)
+
+# Extract the first table (or specify the exact table if there are multiple)
+table2024 &lt;- webpage |&gt; 
+  html_node(&quot;table&quot;) |&gt; 
+  html_table(fill = TRUE) |&gt; 
+  select(Date, `2024`) |&gt; 
+  rename(&quot;Numbers&quot; = `2024`)
+
+    
+#Retrieved archived annual tables
+for (year in 2019:2023) {
+  url &lt;- paste0(&quot;https://www.tsa.gov/travel/passenger-volumes/&quot;, year)
+  webpage &lt;- read_html(url)
+  df &lt;- webpage  |&gt; 
+    html_node(&quot;table&quot;) |&gt; 
+    html_table(fill = TRUE)
+  assign(paste0(&quot;table&quot;, year), df)
+}
+
+FullTable &lt;- rbind(table2024,table2023,table2022,table2021,table2020,table2019) |&gt; 
+  mutate(Date = mdy(Date)) |&gt; 
+  mutate(Numbers = str_replace_all(Numbers, &quot;,&quot;, &quot;&quot;)) |&gt; 
+  mutate(Numbers = as.numeric(Numbers))
+
+ggplot(FullTable, aes(x = Date, y = Numbers)) +
+  geom_area(fill = &quot;lightblue&quot;, alpha = 0.5) +
+  geom_line(linewidth = 0.3)+
+  labs(title = &quot;TSA Checkpoint Travel Numbers&quot;,
+       x = &quot;Year&quot;,
+       y = &quot;Travelers&quot;) +
+  scale_y_continuous(labels = comma, breaks = seq(0, 3000000, by = 500000)) +  
+  scale_x_date(date_breaks = &quot;1 year&quot;, date_labels = &quot;%Y&quot;) +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.title = element_text(hjust = 0.5, size = 24))
+
+FullTable &lt;- rbind(table2024,table2023,table2022,table2021,table2020,table2019) |&gt; 
+  mutate(Date = mdy(Date)) |&gt; 
+  mutate(Numbers = str_replace_all(Numbers, &quot;,&quot;, &quot;&quot;)) |&gt; 
+  mutate(Numbers = as.numeric(Numbers))
+
+
+
+# Define UI
+ui &lt;- fluidPage(
+  titlePanel(&quot;TSA Checkpoint Travel Numbers&quot;),
+  fluidRow(
+    column(12,
+           sidebarPanel(
+             selectInput(&quot;selected_year&quot;, &quot;Select Year&quot;, choices = 2019:2024),
+             selectInput(&quot;selected_day&quot;, &quot;Select Day&quot;, choices = NULL)  # Options will be updated dynamically
+           ),
+           mainPanel(
+             plotOutput(&quot;travel_plot&quot;),
+             DTOutput(&quot;travel_table&quot;)
+           )
+    )
+  )
+)
+
+# Define server logic
+server &lt;- function(input, output, session) {
+  # Update the day selection input based on the selected year
+  observe({
+    selected_year &lt;- input$selected_year
+    days_in_year &lt;- FullTable %&gt;%
+      filter(format(Date, &quot;%Y&quot;) == selected_year) %&gt;%
+      mutate(day = format(Date, &quot;%m-%d&quot;)) %&gt;%
+      pull(day) %&gt;%
+      unique() %&gt;%
+      sort()
+    
+    updateSelectInput(session, &quot;selected_day&quot;, choices = days_in_year)
+  })
+  
+  # Render the plot
+  output$travel_plot &lt;- renderPlot({
+    filtered_data &lt;- FullTable %&gt;%
+      filter(format(Date, &quot;%Y&quot;) == input$selected_year)
+    
+    ggplot(filtered_data, aes(x = Date, y = Numbers)) +
+      geom_area(fill = &quot;lightblue&quot;, alpha = 0.5) +
+      geom_line(linewidth = 0.3) +
+      labs(title = &quot;TSA Checkpoint Travel Numbers&quot;,
+           x = &quot;Date&quot;,
+           y = &quot;Travelers&quot;) +
+      scale_y_continuous(labels = comma, breaks = seq(0, 3000000, by = 500000), limits = c(0, 3000000)) +
+      scale_x_date(date_breaks = &quot;1 month&quot;, date_labels = &quot;%b&quot;) +
+      theme_minimal() +
+      theme(panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            plot.title = element_text(hjust = 0.5))
+  })
+  
+  # make table based on a day (month-day)
+  output$travel_table &lt;- renderDT({
+    selected_day &lt;- input$selected_day
+    data_table &lt;- FullTable %&gt;%
+      filter(format(Date, &quot;%m-%d&quot;) == selected_day) %&gt;%
+      group_by(Year = format(Date, &quot;%Y&quot;)) %&gt;%
+      summarise(Travelers = sum(Numbers)) %&gt;%
+      arrange(Year) |&gt; 
+      mutate(Travelers = format(Travelers, big.mark = &quot;,&quot;, scientific = FALSE))
+    
+    datatable(data_table, options = list(dom = &#39;t&#39;), rownames = FALSE) 
+  })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("section-TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
