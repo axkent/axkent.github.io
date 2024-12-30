@@ -1,3 +1,11 @@
 ---
-title: "axkent"
+title: "Axel Kent"
+about:
+  template: solana
+format:
+  html:
+    theme: sandstone
+    css: styles.css
 ---
+
+Hello! My name is Axel. This is a website I'm putting together to showcase my data science work.
