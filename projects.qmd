@@ -1,0 +1,26 @@
+---
+title: "Projects"
+format: html
+---
+
+## Shiny App: Launch Metrics: 2024 Dodgers-Padres Playoff Series
+This app examines the launch metrics in a baseball series. The app lets users filter observations by game date, pitcher, batter, and event type. Clicking on a point shows the associated [Baseball Savant](https://baseballsavant.mlb.com/) video. 
+
+
+![](media/shiny.png)
+
+- [**Live App**](https://axelkent.shinyapps.io/LaunchMetricsApp/)
+- [**GitHub Repository**](https://github.com/axkent/Launch-Metrics)
+
+---
+
+## Closeread Article submitted to the [Closeread Prize](https://posit.co/blog/closeread-prize-announcement/)
+After building the [Launch Metrics Shiny app](https://axelkent.shinyapps.io/LaunchMetricsApp/), I put together an interactive article featuring the app. To retell a story of the series, users will scroll and see a series of interactive plots that highlight patterns of balls in play and key series events. 
+
+
+![](media/closeread.png)
+
+- [**Closeread Article**](https://axkent.quarto.pub/closeread-vectors-of-victory/)
+- [**GitHub Repository**](https://github.com/axkent/Launch-Metrics)
+
+---

@@ -1,7 +1,14 @@
 ---
 title: "Axel Kent"
+image: media/headshot.jpg
 about:
-  template: solana
+  template: jolla
+  image-shape: round
+  links:
+    - icon: linkedin
+      href: https://www.linkedin.com/in/axel-kent
+    - icon: github
+      href: https://github.com/axkent
 format:
   html:
     theme: sandstone
