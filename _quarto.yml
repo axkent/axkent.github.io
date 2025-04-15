@@ -9,6 +9,9 @@ website:
         text: Home
       - href: projects.qmd
         text: Projects
+      - href: COL-SD-2025-04-13.qmd
+        text: COL @ SD - Apr 2025 series
+
 
 format:
   html:
