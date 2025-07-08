@@ -8,9 +8,12 @@ website:
       - href: index.qmd
         text: Home
       - href: projects.qmd
-        text: Projects
+        text: Closeread Project
+      - href: BattingAvgs.qmd
+        text: 2025 Batting Averages
       - href: COL-SD-2025-04-13.qmd
         text: COL @ SD - Apr 2025 series
+
 
 
 format:
