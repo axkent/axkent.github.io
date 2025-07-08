@@ -9,7 +9,7 @@
   {
     "objectID": "projects.html",
     "href": "projects.html",
-    "title": "Projects",
+    "title": "Closeread Project",
     "section": "",
     "text": "This app examines the launch metrics in a baseball series. The app lets users filter observations by game date, pitcher, batter, and event type. Clicking on a point shows the associated Baseball Savant video.\n\n\nLive App\nGitHub Repository"
   },
@@ -23,14 +23,14 @@
   {
     "objectID": "projects.html#shiny-app-launch-metrics-2024-dodgers-padres-playoff-series",
     "href": "projects.html#shiny-app-launch-metrics-2024-dodgers-padres-playoff-series",
-    "title": "Projects",
+    "title": "Closeread Project",
     "section": "",
     "text": "This app examines the launch metrics in a baseball series. The app lets users filter observations by game date, pitcher, batter, and event type. Clicking on a point shows the associated Baseball Savant video.\n\n\nLive App\nGitHub Repository"
   },
   {
     "objectID": "projects.html#closeread-article-submitted-to-the-closeread-prize",
     "href": "projects.html#closeread-article-submitted-to-the-closeread-prize",
-    "title": "Projects",
+    "title": "Closeread Project",
     "section": "Closeread Article submitted to the Closeread Prize",
     "text": "Closeread Article submitted to the Closeread Prize\nAfter building the Launch Metrics Shiny app, I put together an interactive article featuring the app. To retell a story of the series, users will scroll and see a series of interactive plots that highlight patterns of balls in play and key series events.\n\n\nCloseread Article\nGitHub Repository"
   },
