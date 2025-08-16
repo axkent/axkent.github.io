@@ -1,26 +1,27 @@
 project:
   type: website
   output-dir: docs
-
 website:
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: projects.qmd
-        text: Closeread Project
-      - href: BattingAvgs.qmd
-        text: 2025 Batting Averages
-      - href: COL-SD-2025-04-13.qmd
-        text: COL @ SD - Apr 2025 series
-
-
-
+      - href: resume.qmd
+        text: Résumé   
+      - text: Projects
+        menu:
+          - href: closeread.qmd
+            text: Closeread Project
+          - href: pitch_release.qmd
+            text: Vertical release position as a pitch tipping indicator?
+          - href: BattingAvgs.qmd
+            text: 2025 Batting Averages
+          - href: COL-SD-2025-04-13.qmd
+            text: COL @ SD - Apr 2025 series
+   
 format:
   html:
-    theme: sandstone
+    theme: flatly
     css: styles.css
     toc: true
-
 editor: visual
-

@@ -11,8 +11,9 @@ about:
       href: https://github.com/axkent
 format:
   html:
-    theme: sandstone
+    theme: flatly
     css: styles.css
+    toc: false
 ---
 
-Hello! My name is Axel. This is a website I'm putting together to showcase my data science work.
+Hello! My name is Axel. This is a website I'm putting together to showcase my data science projects.

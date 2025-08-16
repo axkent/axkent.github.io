@@ -1,10 +1,38 @@
 [
   {
+    "objectID": "closeread.html",
+    "href": "closeread.html",
+    "title": "Closeread Project",
+    "section": "",
+    "text": "This app examines the launch metrics in a baseball series. The app lets users filter observations by game date, pitcher, batter, and event type. Clicking on a point shows the associated Baseball Savant video.\n\n\nLive App\nGitHub Repository"
+  },
+  {
+    "objectID": "closeread.html#shiny-app-launch-metrics-2024-dodgers-padres-playoff-series",
+    "href": "closeread.html#shiny-app-launch-metrics-2024-dodgers-padres-playoff-series",
+    "title": "Closeread Project",
+    "section": "",
+    "text": "This app examines the launch metrics in a baseball series. The app lets users filter observations by game date, pitcher, batter, and event type. Clicking on a point shows the associated Baseball Savant video.\n\n\nLive App\nGitHub Repository"
+  },
+  {
+    "objectID": "closeread.html#closeread-article-submitted-to-the-closeread-prize",
+    "href": "closeread.html#closeread-article-submitted-to-the-closeread-prize",
+    "title": "Closeread Project",
+    "section": "Closeread Article submitted to the Closeread Prize",
+    "text": "Closeread Article submitted to the Closeread Prize\nAfter building the Launch Metrics Shiny app, I put together an interactive article featuring the app. To retell a story of the series, users will scroll and see a series of interactive plots that highlight patterns of balls in play and key series events.\n\n\nCloseread Article\nGitHub Repository"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Axel Kent",
     "section": "",
-    "text": "Hello! My name is Axel. This is a website I’m putting together to showcase my data science work."
+    "text": "Hello! My name is Axel. This is a website I’m putting together to showcase my data science projects."
+  },
+  {
+    "objectID": "pitch_release.html",
+    "href": "pitch_release.html",
+    "title": "Vertical release position as a pitch tipping indicator?",
+    "section": "",
+    "text": "➤ Introduction: A look at Dylan Cease’s pitch selection\nDylan Cease strongly favors his slider and fastball. Per Baseball Savant, 88.2% of his pitches through 2025 were either a slider or four seamer (fastball).\n\n\n\nChart from Baseball Savant (accessed 8/13/2025)\n\n\n\n If the vertical release position for Cease’s slider is significantly different from his fastball, could a batter make a good prediction about the upcoming pitch? \n\n\n\n➤ Vertical release position analysis\nThe following figure shows the vertical release positions (defined as “release_pos_z” in Baseball Savant’s documentation) for Cease’s top two pitches in 2025. Sliders are abbreviated with “SL”, while fastballs are abbreviated with “FF”. Innings pitched (“IP”), pitch counts per pitch type, and Game Score (“GS”, a measure of a pitcher’s performance, are also included). \n\n\n\nAcross all game dates in 2025, the median vertical release position for sliders is lower than the median vertical release position for fastballs. While we can explore the question of determining statistical significant differences between Cease’s fastball and slider vertical release positions, I think it’s important to ask a practically significant question:\n\nCan a player (in particular, an opposing batter who stands 60.5 feet away from Cease) recognize a few inches of difference in release position?\n\n\n\n➤ Video analysis\nTo address this question, I tracked the video URLs for each slider and fastball closest to their respective medians, for each game date.\nI also looked at the videos for the game date with the largest difference between the highest fastball vertical release position and the lowest slider vertical release position. From the box plots, we can see that occurred on June 5th, 2025, where the highest fastball vertical release position was 77.76 inches and the lowest slider vertical release position was 70.2 inches; a 7.56 inch difference. Here’s what those pitches look like:\n\n\n\nScreenshots from Baseball Savant. A horizontal blue line is superimposed under the ball for Cease’s fastball.\n\n\nI tried performing similar analysis for the game date with the largest median difference. Unfortunately, we can see that the video camera was oriented differently between pitches, as the backstop appears to be lower in the fastball video than in the slider video.\n\n\n\nScreenshots from Baseball Savant. A horizontal yellow line is superimposed at the start of the backstop netting.\n\n\nI haven’t had the chance to review other videos yet, but have curated a list of video URLs for pitches closest to their respective medians on each game date below.\n\n\n\n\n\n\n➤ Conclusion & Next Steps\nThough there are challenges in reviewing video data with different camera orientations, there may still be more to learn from this project. I received a suggestion to explore using computer vision methods with the BaseballCV repository (shout-out to Oliver Chang). I also think there will always be some interest in exploring pitch tipping (e.g. last week, a Red Sox coach was spotted holding an iPad with an image contrasting the opponent pitcher’s pre-pitch positioning).\n\n\n\nScreenshot from Jomboy Media video: “Red Sox scouting report vs. Padres was caught on camera, a breakdown”\n\n\n\n\n➤ Code\n\nPlease see my GitHub for code to retrieve Baseball Savant data and reproduce this analysis."
   },
   {
     "objectID": "projects.html",
@@ -12,13 +40,6 @@
     "title": "Closeread Project",
     "section": "",
     "text": "This app examines the launch metrics in a baseball series. The app lets users filter observations by game date, pitcher, batter, and event type. Clicking on a point shows the associated Baseball Savant video.\n\n\nLive App\nGitHub Repository"
-  },
-  {
-    "objectID": "projects.html#shiny-app-name-of-your-app",
-    "href": "projects.html#shiny-app-name-of-your-app",
-    "title": "Projects",
-    "section": "Shiny App: [Name of Your App]",
-    "text": "Shiny App: [Name of Your App]\n[Write a short introduction about this app.]\n\nDescription\n[Describe the purpose and functionality of the app. For example: “This Shiny app visualizes MLB game results, allowing users to filter by team and year.”]\n\n\nHighlights\n\n[Highlight 1, e.g., “Interactive filters for year and team.”]\n[Highlight 2, e.g., “Color-coded results showing wins and losses.”]\n\n\n\nScreenshots\n\n\n\nApp Screenshot\n\n\n\n\nExplore the App\n\nLive App\nGitHub Repository\n\n\n[Add more projects below in a similar format.]"
   },
   {
     "objectID": "projects.html#shiny-app-launch-metrics-2024-dodgers-padres-playoff-series",
@@ -56,17 +77,17 @@
     "text": "Tatis Jr. and Arraez Hitting Performance\n\nTatis Jr. vs Colorado pitchers\n\n\n\n\nArraez vs Colorado pitchers"
   },
   {
-    "objectID": "BattingAvgs.html",
-    "href": "BattingAvgs.html",
-    "title": "2025 Batting Averages",
-    "section": "",
-    "text": "###Tatis Jr. \n###Machado \n###Bogaerts"
+    "objectID": "pitch_release.html#if-the-vertical-release-position-for-ceases-slider-is-significantly-different-from-his-fastball-could-a-batter-make-a-good-prediction-about-the-upcoming-pitch",
+    "href": "pitch_release.html#if-the-vertical-release-position-for-ceases-slider-is-significantly-different-from-his-fastball-could-a-batter-make-a-good-prediction-about-the-upcoming-pitch",
+    "title": "Exploring vertical release position as a pitch tipping indicator",
+    "section": "If the vertical release position for Cease’s slider is significantly different from his fastball, could a batter make a good prediction about the upcoming pitch?",
+    "text": "If the vertical release position for Cease’s slider is significantly different from his fastball, could a batter make a good prediction about the upcoming pitch?"
   },
   {
-    "objectID": "BattingAvgs.html#batting-averages",
-    "href": "BattingAvgs.html#batting-averages",
-    "title": "2025 Batting Averages",
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Résumé",
     "section": "",
-    "text": "###Tatis Jr. \n###Machado \n###Bogaerts"
+    "text": "&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"media/resume.pdf\"&gt;Download the PDF&lt;/a&gt;.\n&lt;/p&gt;"
   }
 ]

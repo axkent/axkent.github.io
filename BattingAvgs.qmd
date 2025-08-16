@@ -1,11 +1,19 @@
 ---
 title: "2025 Batting Averages"
 subtitle: A look at Tatis Jr., Machado, and Bogaerts
+date: "2025-07-07"
 ---
+
 ## 2025 Batting Averages
 
-<iframe src="media/BattingAvg/Tatis.html" width="120%" height="600px" style="border:none;"></iframe>
+<iframe src="media/BattingAvg/Tatis.html" width="120%" height="600px" style="border:none;">
 
-<iframe src="media/BattingAvg/Machado.html" width="120%" height="600px" style="border:none;"></iframe>
+</iframe>
 
-<iframe src="media/BattingAvg/Bogaerts.html" width="120%" height="600px" style="border:none;"></iframe>
+<iframe src="media/BattingAvg/Machado.html" width="120%" height="600px" style="border:none;">
+
+</iframe>
+
+<iframe src="media/BattingAvg/Bogaerts.html" width="120%" height="600px" style="border:none;">
+
+</iframe>

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-08-15">
 
-<title>About</title>
+<title>Vertical release position as a pitch tipping indicator?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-41b3a2598983921e5440ee1f58f39852.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-09e026eaf2cc604157e76dc7fb526ea0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -87,6 +88,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resume.html"> 
+<span class="menu-text">Résumé</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Projects</span>
@@ -98,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="./pitch_release.html">
- <span class="dropdown-text">Can differences in vertical release position serve as a pitch tipping indicator?</span></a>
+ <span class="dropdown-text">Vertical release position as a pitch tipping indicator?</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./BattingAvgs.html">
@@ -121,15 +126,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-a-look-at-dylan-ceases-pitch-selection" id="toc-introduction-a-look-at-dylan-ceases-pitch-selection" class="nav-link active" data-scroll-target="#introduction-a-look-at-dylan-ceases-pitch-selection">➤ Introduction: A look at Dylan Cease’s pitch selection</a></li>
+  <li><a href="#vertical-release-position-analysis" id="toc-vertical-release-position-analysis" class="nav-link" data-scroll-target="#vertical-release-position-analysis">➤ Vertical release position analysis</a></li>
+  <li><a href="#video-analysis" id="toc-video-analysis" class="nav-link" data-scroll-target="#video-analysis">➤ Video analysis</a></li>
+  <li><a href="#conclusion-next-steps" id="toc-conclusion-next-steps" class="nav-link" data-scroll-target="#conclusion-next-steps">➤ Conclusion &amp; Next Steps</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">➤ Code</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Vertical release position as a pitch tipping indicator?</h1>
 </div>
 
 
@@ -137,6 +152,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 15, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -146,8 +167,71 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introduction-a-look-at-dylan-ceases-pitch-selection" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-a-look-at-dylan-ceases-pitch-selection">➤ Introduction: A look at Dylan Cease’s pitch selection</h3>
+<p><a href="https://www.mlb.com/player/dylan-cease-656302">Dylan Cease</a> strongly favors his slider and fastball. Per Baseball Savant, 88.2% of his pitches through 2025 were either a slider or four seamer (fastball).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/Cease/chart.png" class="img-fluid figure-img"></p>
+<figcaption>Chart from <a href="https://baseballsavant.mlb.com/savant-player/dylan-cease-656302?stats=statcast-r-pitching-mlb">Baseball Savant</a> (accessed 8/13/2025)</figcaption>
+</figure>
+</div>
+<div style="text-align: center; font-size: 18px; margin: 20px 0;">
+<p><br><br> <strong>If the vertical release position for Cease’s slider is significantly different from his fastball, could a batter make a good prediction about the upcoming pitch?</strong> <br><br></p>
+</div>
+</section>
+<section id="vertical-release-position-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="vertical-release-position-analysis">➤ Vertical release position analysis</h3>
+<p>The following figure shows the vertical release positions (defined as “release_pos_z” in <a href="https://baseballsavant.mlb.com/csv-docs">Baseball Savant’s documentation</a>) for Cease’s top two pitches in 2025. Sliders are abbreviated with “SL”, while fastballs are abbreviated with “FF”. Innings pitched (“IP”), pitch counts per pitch type, and Game Score (“GS”, <a href="https://blogs.fangraphs.com/instagraphs/game-score-v2-0/">a measure of a pitcher’s performance</a>, are also included). <br><br></p>
+<div style="margin-left: -200px;">
+<p><iframe src="media/Cease/plotly_release_z.html" width="150%" height="600px" style="border:none;"></iframe></p>
+</div>
+<p>Across all game dates in 2025, the median vertical release position for sliders is lower than the median vertical release position for fastballs. While we can explore the question of determining statistical significant differences between Cease’s fastball and slider vertical release positions, I think it’s important to ask a <em>practically significant</em> question:<br><br></p>
+<ul>
+<li><strong>Can a player (in particular, an opposing batter who stands 60.5 feet away from Cease) recognize a few inches of difference in release position?</strong></li>
+</ul>
+</section>
+<section id="video-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="video-analysis">➤ Video analysis</h3>
+<p>To address this question, I tracked the video URLs for each slider and fastball closest to their respective medians, for each game date.</p>
+<p>I also looked at the videos for the game date with the largest difference between the highest fastball vertical release position and the lowest slider vertical release position. From the box plots, we can see that occurred on June 5th, 2025, where the highest fastball vertical release position was 77.76 inches and the lowest slider vertical release position was 70.2 inches; a 7.56 inch difference. Here’s what those pitches look like:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/Cease/large-outlier-diff-labeled.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshots from Baseball Savant. A horizontal blue line is superimposed under the ball for Cease’s fastball.</figcaption>
+</figure>
+</div>
+<p>I tried performing similar analysis for the game date with the largest median difference. Unfortunately, we can see that the video camera was oriented differently between pitches, as the backstop appears to be lower in the fastball video than in the slider video.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/Cease/largest-median-diff-labeled.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshots from Baseball Savant. A horizontal yellow line is superimposed at the start of the backstop netting.</figcaption>
+</figure>
+</div>
+<p>I haven’t had the chance to review other videos yet, but have curated a list of video URLs for pitches closest to their respective medians on each game date below.</p>
+<div style="margin-left: -15px;">
+<iframe src="media/Cease/median-video-table.html" width="100%" height="600px" style="border:none;">
+</iframe>
+</div>
+</section>
+<section id="conclusion-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-next-steps">➤ Conclusion &amp; Next Steps</h3>
+<p>Though there are challenges in reviewing video data with different camera orientations, there may still be more to learn from this project. I received a suggestion to explore using computer vision methods with the <a href="https://github.com/BaseballCV/BaseballCV">BaseballCV repository</a> (shout-out to <a href="https://github.com/oliverc1623">Oliver Chang</a>). I also think there will always be some interest in exploring pitch tipping (e.g.&nbsp;<a href="https://www.youtube.com/watch?v=BTgvDIawveI">last week, a Red Sox coach was spotted holding an iPad with an image contrasting the opponent pitcher’s pre-pitch positioning</a>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/Cease/Boston-pitchtip.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot from Jomboy Media video: “Red Sox scouting report vs.&nbsp;Padres was caught on camera, a breakdown”</figcaption>
+</figure>
+</div>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">➤ Code</h3>
+<div style="margin-top: 40px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+<p>Please see my <a href="https://github.com/axkent/release-positions" target="_blank">GitHub</a> for code to retrieve Baseball Savant data and reproduce this analysis.</p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
