@@ -1,0 +1,59 @@
+---
+title: "Vertical release position as a pitch tipping indicator?"
+format: html
+date: "2025-08-15"
+---
+
+### ➤ Introduction: A look at Dylan Cease's pitch selection
+
+[Dylan Cease](https://www.mlb.com/player/dylan-cease-656302) strongly favors his slider and fastball. Per Baseball Savant, 88.2% of his pitches through 2025 were either a slider or four seamer (fastball).
+
+![Chart from [Baseball Savant](https://baseballsavant.mlb.com/savant-player/dylan-cease-656302?stats=statcast-r-pitching-mlb) (accessed 8/13/2025)](media/Cease/chart.png)
+
+<div style="text-align: center; font-size: 18px; margin: 20px 0;">
+<br><br>
+<strong>If the vertical release position for Cease's slider is significantly different from his fastball, could a batter make a good prediction about the upcoming pitch?</strong>
+<br><br>
+</div>
+
+
+### ➤ Vertical release position analysis
+The following figure shows the vertical release positions (defined as "release_pos_z" in [Baseball Savant's documentation](https://baseballsavant.mlb.com/csv-docs)) for Cease's top two pitches in 2025. Sliders are abbreviated with "SL", while fastballs are abbreviated with "FF". Innings pitched ("IP"), pitch counts per pitch type, and Game Score ("GS", [a measure of a pitcher's performance](https://blogs.fangraphs.com/instagraphs/game-score-v2-0/), are also included).
+<br><br>
+
+<div style="margin-left: -200px;">
+  <iframe src="media/Cease/plotly_release_z.html" width="150%" height="600px" style="border:none;"></iframe>
+</div>
+
+Across all game dates in 2025, the median vertical release position for sliders is lower than the median vertical release position for fastballs. While we can explore the question of determining statistical significant differences between Cease's fastball and slider vertical release positions, I think it's important to ask a 
+*practically significant* question:<br><br>
+
+- **Can a player (in particular, an opposing batter who stands 60.5 feet away from Cease) recognize a few inches of difference in release position?**
+
+### ➤ Video analysis
+To address this question, I tracked the video URLs for each slider and fastball closest to their respective medians, for each game date. 
+
+I also looked at the videos for the game date with the largest difference between the highest fastball vertical release position and the lowest slider vertical release position. From the box plots, we can see that occurred on June 5th, 2025, where the highest fastball vertical release position was 77.76 inches and the lowest slider vertical release position was 70.2 inches; a 7.56 inch difference. Here's what those pitches look like: 
+
+![Screenshots from Baseball Savant. A horizontal blue line is superimposed under the ball for Cease's fastball.](media/Cease/large-outlier-diff-labeled.png)
+
+I tried performing similar analysis for the game date with the largest median difference. Unfortunately, we can see that the video camera was oriented differently between pitches, as the backstop appears to be lower in the fastball video than in the slider video.
+
+![Screenshots from Baseball Savant. A horizontal yellow line is superimposed at the start of the backstop netting.](media/Cease/largest-median-diff-labeled.png)
+
+I haven't had the chance to review other videos yet, but have curated a list of video URLs for pitches closest to their respective medians on each game date below. 
+
+<div style="margin-left: -15px;">
+<iframe src="media/Cease/median-video-table.html" width="100%" height="600px" style="border:none;"></iframe>
+</div>
+
+### ➤ Conclusion & Next Steps
+Though there are challenges in reviewing video data with different camera orientations, there may still be more to learn from this project. I received a suggestion to explore using computer vision methods with the [BaseballCV repository](https://github.com/BaseballCV/BaseballCV) (shout-out to [Oliver Chang](https://github.com/oliverc1623)). I also think there will always be some interest in exploring pitch tipping (e.g. [last week, a Red Sox coach was spotted holding an iPad with an image contrasting the opponent pitcher's pre-pitch positioning](https://www.youtube.com/watch?v=BTgvDIawveI)). 
+
+![Screenshot from Jomboy Media video: "Red Sox scouting report vs. Padres was caught on camera, a breakdown"](media/Cease/Boston-pitchtip.png)
+
+### ➤ Code
+
+<div style="margin-top: 40px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+Please see my <a href="https://github.com/axkent/release-positions" target="_blank">GitHub</a> for code to retrieve Baseball Savant data and reproduce this analysis.
+</div>
